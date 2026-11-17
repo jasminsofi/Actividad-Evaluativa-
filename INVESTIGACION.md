@@ -17,25 +17,25 @@ RTA: Un `<div>` oculto es procesado inmediatamente por el navegador (sus imágen
 RTA:En el modo "open", el Shadow DOM es accesible desde el código JavaScript exterior mediante la propiedad element.shadowRoot, facilitando la inspección y la depuración. En el modo "closed", element.shadowRoot devuelve null desde el exterior, bloqueando el acceso directo (aunque no representa una seguridad estricta, ya que puede eludirse si se guardaron referencias previas del shadow root).
 
 
-4. ¿Qué es un `<slot>` y para qué sirve en un componente reutilizable?
+### 4. ¿Qué es un `<slot>` y para qué sirve en un componente reutilizable?
 
 
 RTA:Un `<slot>` (ranura) es un marcador de posición ubicado dentro del Shadow DOM que permite inyectar contenido HTML personalizado proporcionado por el usuario desde el exterior. Sirve para dotar de flexibilidad a los componentes reutilizables, permitiendo que la estructura base sea fija pero que ciertos bloques de texto o elementos internos varíen dinámicamente en cada instancia.
 
 
-5. ¿Qué navegadores soportan hoy los Web Components?
+### 5. ¿Qué navegadores soportan hoy los Web Components?
 
 
 RTA:Actualmente, los Web Components cuentan con compatibilidad nativa total en todos los navegadores web modernos de escritorio y dispositivos móviles (Google Chrome, Mozilla Firefox, Apple Safari y Microsoft Edge). Fuente: MDN Web Docs - Web Components. Fecha de consulta: 17 de noviembre de 2026.
 
 ## PARTE 2 · Investigación: frameworks, librerías y Node.js
 
-1. Explica con un ejemplo la diferencia entre estándar del navegador, librería, framework
+### 1. Explica con un ejemplo la diferencia entre estándar del navegador, librería, framework
 y entorno de ejecución.
 
 RTA: Un estándar del navegador (como Web Components) es una especificación nativa soportada por todos los navegadores sin librerías externas. Una librería (como React) es un conjunto de funciones y herramientas que importas voluntariamente para estructurar vistas de usuario. Un framework (como Angular) es una arquitectura rígida y completa que impone normas estrictas sobre cómo desarrollar toda la aplicación. Por último, un entorno de ejecución (como Node.js) es el motor que permite ejecutar código JavaScript fuera de la ventana del navegador.
 
-2. Completa la tabla con una o dos frases por celda:
+### 2. Completa la tabla con una o dos frases por celda:
 
 
 | Criterio | Web Components nativos | React / Vue | Angular |
@@ -46,12 +46,12 @@ RTA: Un estándar del navegador (como Web Components) es una especificación nat
 | **Ventajas principales** | Independencia total de frameworks, alta durabilidad y soporte universal nativo | Enorme ecosistema de complementos, gran flexibilidad y rendimiento óptimo | Arquitectura robusta, ideal para grandes equipos y estandarización corporativa |
 | **Desventajas principales** | Falta de características avanzadas integradas; requiere más código base (boilerplate) | Curva de aprendizaje inicial y dependencia constante de actualizaciones externas | Curva de aprendizaje elevada y alta complejidad estructural |
 
-3. ¿Qué es Node.js, para qué se usa y qué relación tiene npm con React, Vue yAngular?
+### 3. ¿Qué es Node.js, para qué se usa y qué relación tiene npm con React, Vue yAngular?
 Si una tienda en línea usa React y Node.js, ¿qué hace cada uno?
 
 RTA:Node.js es un entorno de ejecución de JavaScript basado en el motor V8 de Chrome que permite correr código JS en el servidor. npm (Node Package Manager) es el gestor de paquetes que acompaña a Node.js y sirve para descargar e instalar las librerías o frameworks (como React, Vue o Angular) y sus dependencias en el proyecto. En una tienda en línea, React se ejecuta en el navegador del cliente para renderizar los productos, el carrito de compras y la interfaz visual interactiva, mientras que Node.js opera en el servidor gestionando la lógica de negocio, las conexiones a la base de datos y las solicitudes de pago.
 
-4. Elige la herramienta que usarías en cada caso y justifica en 3 a 5 líneas:
+### 4. Elige la herramienta que usarías en cada caso y justifica en 3 a 5 líneas:
 a. Un botón de chat que varias empresas pegan en sus propias páginas.
 b. Una aplicación web grande para un banco, con muchos equipos de desarrollo
 
