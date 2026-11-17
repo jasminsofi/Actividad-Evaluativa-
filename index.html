@@ -28,4 +28,66 @@
 </head>
 <body>
 
-   
+    <h1>Sistema de Control - Veterinaria La Esperanza</h1>
+
+    <div class="contenedor-fichas">
+        
+        <mascota-ficha nombre="Firulais" especie="Canino" edad="3 años" proxima-vacuna="15/12/2026">
+            <p>Observación: Alérgico a la penicilina. Requiere revisión de rutina.</p>
+        </mascota-ficha>
+
+        
+        <mascota-ficha nombre="Luna" especie="Felino" edad="2 años" proxima-vacuna="20/12/2026">
+            <p>Observación: Muy tranquila, se le administró antiparasitario.</p>
+        </mascota-ficha>
+
+        <!--Instancia 3 con datos distintos -->
+        <mascota-ficha nombre="Rocky" especie="Canino" edad="5 años" proxima-vacuna="10/01/2027">
+            <p>Observación: Control de peso y dieta blanda recomendada.</p>
+        </mascota-ficha>
+    </div>
+
+    <!--Template propio definido en el HTML -->
+    <template id="template-mascota">
+        <style>
+            .tarjeta {
+                background: #ffffff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 16px;
+                width: 280px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                font-family: Arial, sans-serif;
+            }
+            .tarjeta h3 {
+                margin-top: 0;
+                color: #2980b9;
+                border-bottom: 2px solid #ecf0f1;
+                padding-bottom: 8px;
+            }
+            .etiqueta {
+                font-weight: bold;
+                color: #34495e;
+            }
+            .slot-container {
+                margin-top: 12px;
+                padding-top: 8px;
+                border-top: 1px dashed #bdc3c7;
+                font-size: 0.9em;
+                color: #7f8c8d;
+            }
+        </style>
+        <div class="tarjeta">
+            <h3 id="nombre-mascota"></h3>
+            <p><span class="etiqueta">Especie:</span> <span id="especie-mascota"></span></p>
+            <p><span class="etiqueta">Edad:</span> <span id="edad-mascota"></span></p>
+            <p><span class="etiqueta">Próxima Vacuna:</span> <span id="vacuna-mascota"></span></p>
+            <div class="slot-container">
+                <!-- Un <slot> para una nota o descripción libre -->
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+
+</body>
+</html>
